@@ -1,7 +1,7 @@
 import Owner from "../assets/image/person's-image.jpeg"
 export function About(){
     return(
-        <section className="w-[90%] mx-auto my-10 grid gap-10">
+        <section className="w-[90%] mx-auto my-10 grid md:grid-cols-2 gap-10">
             <div className="w-full">
                 <img src={Owner} alt="owner-image" className="w-full h-96 rounded-xl"/>
             </div>
@@ -13,8 +13,7 @@ export function About(){
                     My brand, Bells Visual, is all about combining creativity with strategy to deliver designs that are not just beautiful but also effective and impactful. I stay updated with the latest design trends to ensure every project meets professional standards.
                     Let’s create something amazing together! 
                 </p>
-            </div>
-            <div className="flex gap-2">
+                <div className="flex gap-2">
                 <div className="p-4 grid justify-center shadow-xl">
                     <h1 className="text-xl font-bold text-center">3+</h1>
                     <span className="text-center">Years experience</span>
@@ -28,6 +27,8 @@ export function About(){
                     <span className="text-center">Happy client</span>
                 </div>
             </div>
+            </div>
+            
         </section>
     )
 }

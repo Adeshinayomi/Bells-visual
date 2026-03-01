@@ -13,7 +13,7 @@ import logo1 from '../assets/image/logo-1.png'
                     Take a look at some of my finest works for brands that i have worked with
                 </p>
             </div>
-            <div className='w-[90%] mx-auto grid gap-5'>
+            <div className='w-[90%] mx-auto grid gap-5 md:grid-cols-4'>
                 <div className='relative overflow-hidden rounded-xl'>
                     <img src={graphics1} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
@@ -22,8 +22,8 @@ import logo1 from '../assets/image/logo-1.png'
                     <img src={graphics3} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
                 </div>
-                <div className='relative overflow-hidden rounded-xl'>
-                    <img src={logo1} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
+                <div className='relative overflow-hidden rounded-xl md:h-full'>
+                    <img src={logo1} alt="first-graphic" className='md:h-full ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Logo</span>
                 </div>
                 <div className='relative overflow-hidden rounded-xl'>

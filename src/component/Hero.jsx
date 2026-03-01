@@ -6,7 +6,7 @@ import figma from '../assets/image/Icons/figma-icon.png'
 import adobexd from '../assets/image/Icons/adobe-xd-icon.png'
 export function Hero(){
     return(
-        <section className="h-screen flex flex-col justify-center items-center gap-7 bg-hero">
+        <section className="h-screen flex flex-col justify-center items-center gap-7 bg-hero py-[22rem]">
             <div className="w-[100px] h-[100px] rounded-full justify-self-center">
                 <img src={Owner} alt="Owner's-image"  className="w-full h-full rounded-full"/>
             </div>
