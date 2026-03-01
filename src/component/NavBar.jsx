@@ -15,7 +15,7 @@ export function NavBar(){
     
     return(
         <header 
-          className={`fixed top-0 w-full flex justify-between p-4 items-center transition-all duration-300
+          className={`fixed top-0 z-20 w-full flex justify-between p-4 items-center transition-all duration-300
            ${
             scrolled
                 ? "bg-white/80 backdrop-blur-md shadow-sm dark:bg-slate-900/80"
