@@ -5,6 +5,7 @@ import { About } from './component/About'
 import { Services } from './component/Services'
 import { Portfolio } from './component/Portfolio'
 import { Testimonial } from './component/Testimonial'
+import { Contact } from './component/Contact'
 import './App.css'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Services />
       <Portfolio/>
       <Testimonial />
+      <Contact />
     </>
   )
 }
