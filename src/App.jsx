@@ -6,6 +6,7 @@ import { Services } from './component/Services'
 import { Portfolio } from './component/Portfolio'
 import { Testimonial } from './component/Testimonial'
 import { Contact } from './component/Contact'
+import { Footer } from './component/Footer'
 import './App.css'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Portfolio/>
       <Testimonial />
       <Contact />
+      <Footer />
     </>
   )
 }
