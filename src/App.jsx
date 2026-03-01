@@ -2,6 +2,7 @@ import ThemeToggle from './component/ThemeToggle'
 import { NavBar } from './component/NavBar'
 import { Hero } from './component/Hero'
 import { About } from './component/About'
+import { Services } from './component/Services'
 import './App.css'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <NavBar />
       <Hero />
       <About />
+      <Services />
     </>
   )
 }
