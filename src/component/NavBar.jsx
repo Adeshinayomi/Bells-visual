@@ -2,7 +2,19 @@ import { useState,useEffect } from 'react';
 import LightLogo from '../assets/image/Logo-variant-light.png'
 import Menu from '../assets/image/Icons/menu-icon.svg'
 export function NavBar(){
+    const [isOpen,setIsOpen]=useState(false)
     const [scrolled, setScrolled] = useState(false);
+
+    function openMenu(){
+        console.log('clicked')
+        if(!isOpen){
+            setIsOpen(true)
+            console.log('open')
+        }else{
+            setIsOpen(false)
+            console.log(close)
+        }
+    }
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,21 +33,26 @@ export function NavBar(){
                 ? "bg-white/80 backdrop-blur-md shadow-sm dark:bg-slate-900/80"
                 : "bg-transparent"
             }`}>
+                <div className={`${isOpen?'':'hidden'} fixed h-screen w-full bg-black right-0 opacity-25 top-0`}>
+
+                </div>
                 <div className='w-[90%] mx-auto flex justify-between items-center '>
-                    <div >
+                    <div>
                         <a href="#"><img src={LightLogo} alt="light-logo" width={70}/></a>
                     </div>
-
-                    <ul className='hidden md:flex gap-4 justify-center'>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#works">Portfolio</a></li>
+                   
+                    <ul className={`${isOpen?'':'hidden'} fixed top-0 left-0 bg-primary grid items-start py-10 gap-5 w-2/3 h-screen md:relative md:h-fit md:flex gap-4 md:justify-center md:bg-transparent md:py-0`}>
+                        <div className='grid h-1/2 px-4 mt-10 md:flex md:mt-0 md:gap-4 '>
+                            <li className='hover:underline underline-offset-[1rem]'><a href="#">Home</a></li>
+                            <li className=' hover:underline underline-offset-[1rem]'><a href="#about">About</a></li>
+                            <li className=' hover:underline hover:underline-offset-[1rem]'><a href="#services">Services</a></li>
+                            <li className=' hover:underline underline-offset-[1rem]'><a href="#works">Portfolio</a></li>
+                        </div>    
                     </ul>  
                     
                     <div>
+                        <img src={Menu} alt="Menu-bar" width={70} className='relative md:hidden z-20' onClick={openMenu}/>
 
-                        <img src={Menu} alt="Menu-bar" width={70} className='md:hidden'/>
                         <button className="hidden md:flex group ease-in duration-300 flex items-center bg-accent text-White px-4 py-2 rounded-lg gap-2 hover:bg-transparent hover:text-accent hover:border-2 hover:border-accent">
                             <span className="text-md font-medium group-hover:"><a href="#contact">Get In Touch</a></span>
                         </button>
