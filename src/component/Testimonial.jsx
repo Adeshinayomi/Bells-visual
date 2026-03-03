@@ -1,10 +1,10 @@
 import  client from '../assets/image/client.jpg'
 export function Testimonial(){
     return(
-        <section className='grid gap-5 mt-[5rem] w-[90%] mx-auto md:grid-cols-2 h-fit md:flex'>
-            <div className='w-[150px] h-[150px] md:w-full md:h-full'>
+        <section className='grid gap-5 mt-[5rem] w-[90%] mx-auto lg:grid-cols-2 h-fit lg:flex'>
+            <div className='w-[150px] h-[150px] lg:w-full lg:h-full'>
                 <img src={client} alt="client" className='md:w-full md:h-full
-                rounded-full md:rounded-none'/>
+                rounded-full lg:rounded-none'/>
             </div>
             <div className='grid gap-5 items-start place-content-start'>
                 <svg className='h-16 w-16 fill-accent' fill="none" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 

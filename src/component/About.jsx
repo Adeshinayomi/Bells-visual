@@ -1,11 +1,11 @@
 import Owner from "../assets/image/person's-image.jpeg"
 export function About(){
     return(
-        <section className="w-[90%] mx-auto my-10 grid md:grid-cols-2 gap-10">
-            <div className="w-full">
-                <img src={Owner} alt="owner-image" className="w-full h-96 rounded-xl"/>
+        <section className="w-[90%] mx-auto my-10 grid md:grid-cols-2 gap-10 ">
+            <div className="w-full h-full">
+                <img src={Owner} alt="owner-image" className="w-full h-96 rounded-xl md:h-full lg:h-[30rem]"/>
             </div>
-            <div className="grid gap-2">
+            <div className="grid gap-2 lg:place-content-start">
                 <span className="text-lg font-bold">About Me</span>
                 <h1 className="text-3xl font-bold w-5/6">Hi,I'm Sonusi Abiodun</h1>
                 <p>

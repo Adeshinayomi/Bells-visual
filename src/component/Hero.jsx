@@ -6,11 +6,11 @@ import figma from '../assets/image/Icons/figma-icon.png'
 import adobexd from '../assets/image/Icons/adobe-xd-icon.png'
 export function Hero(){
     return(
-        <section className="h-screen flex flex-col justify-center items-center gap-7 bg-hero py-[22rem]">
+        <section className="h-screen flex flex-col justify-center items-center gap-7 bg-hero lg:py-[22rem]">
             <div className="w-[100px] h-[100px] rounded-full justify-self-center">
                 <img src={Owner} alt="Owner's-image"  className="w-full h-full rounded-full"/>
             </div>
-            <h1 className="w-fit text-4xl text-center font-bold">
+            <h1 className="w-fit text-4xl text-center font-bold md:text-5xl md:w-1/2 lg:w-1/3">
                 Hi,I'm a Graphic Designer.
             </h1>
             <p className="text-center text-xl w-5/6 mx-auto">
