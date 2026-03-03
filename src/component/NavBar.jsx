@@ -15,7 +15,7 @@ export function NavBar(){
     
     return(
         <header 
-          className={`fixed top-0 z-20 w-full  p-4 transition-all duration-300
+          className={`fixed top-0 z-20 w-full p-4 transition-all duration-300
            ${
             scrolled
                 ? "bg-white/80 backdrop-blur-md shadow-sm dark:bg-slate-900/80"
@@ -23,20 +23,21 @@ export function NavBar(){
             }`}>
                 <div className='w-[90%] mx-auto flex justify-between items-center '>
                     <div >
-                        <img src={LightLogo} alt="light-logo" width={70}/>
+                        <a href="#"><img src={LightLogo} alt="light-logo" width={70}/></a>
                     </div>
 
-                    <ul className='hidden md:flex gap-4 pl-10 justify-center'>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Portfolio</li>
+                    <ul className='hidden md:flex gap-4 justify-center'>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#works">Portfolio</a></li>
                     </ul>  
                     
                     <div>
 
                         <img src={Menu} alt="Menu-bar" width={70} className='md:hidden'/>
                         <button className="hidden md:flex group ease-in duration-300 flex items-center bg-accent text-White px-4 py-2 rounded-lg gap-2 hover:bg-transparent hover:text-accent hover:border-2 hover:border-accent">
-                            <span className="text-md font-medium group-hover:">Get In Touch</span>
+                            <span className="text-md font-medium group-hover:"><a href="#contact">Get In Touch</a></span>
                         </button>
                     </div>
                 </div>

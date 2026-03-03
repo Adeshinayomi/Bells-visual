@@ -6,7 +6,7 @@ import logo1 from '../assets/image/logo-1.png'
  
  export function Portfolio(){
     return(
-        <section className="bg-hero grid gap-8 justidy-center mt-[10rem]">
+        <section className="bg-hero grid gap-8 justidy-center mt-[10rem] scroll-mt-[8rem]" id='works'>
             <div className="grid gap-5 justify-center">
                 <h1 className="text-3xl font-bold text-center">Featured Works</h1>
                 <p className="text-sm w-5/6 mx-auto text-center font-medium">

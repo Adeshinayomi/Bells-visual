@@ -3,7 +3,7 @@ import brandingIcon from '../assets/image/Icons/branding-iron-icon.png'
 import PosterIcon from '../assets/image/Icons/poster-icon.png'
 export function Services(){
     return(
-        <section className='w-[90%] mx-auto grid  gap-7 mt-[10rem]'>
+        <section className='w-[90%] mx-auto grid  gap-7 mt-[10rem] scroll-mt-[8rem]' id='services'>
             <div className='grid gap-2'>
                 <h1 className='text-center text-3xl font-bold'>Services</h1>
                 <p className='w-5/6 mx-auto text-center text-sm font-medium'>

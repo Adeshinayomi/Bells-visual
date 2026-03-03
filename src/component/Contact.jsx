@@ -1,6 +1,6 @@
 export function Contact(){ 
     return(
-        <form action="none" className="w-[90%] md:w-[80%] lg:w-[60%] mx-auto mt-[7rem] grid gap-10">
+        <form action="none" className="w-[90%] md:w-[80%] lg:w-[60%] mx-auto mt-[7rem] grid gap-10 scroll-mt-[8rem]" id="contact">
             <div className="grid gap-5 lg:w-1/2 lg:mx-auto">
                 <h1 className="text-3xl font-bold md:text-center md:text-4xl">Got a project? <br />
                     Let's Talk
