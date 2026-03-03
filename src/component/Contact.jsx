@@ -6,7 +6,7 @@ export function Contact(){
                     Let's Talk
                 </h1> 
                 <p className="text-md font-medium md:text-center md:w-2/3 md:mx-auto lg:w-full">
-                    Launching a startup or working on an ongoing project? I'm here to help! Reach out, and let's discuss how to make your vision a success!
+                    Launching a business or working on an ongoing project? I'm here to help! Reach out, and let's discuss how to bring your brand to life!
                 </p>
             </div>
            

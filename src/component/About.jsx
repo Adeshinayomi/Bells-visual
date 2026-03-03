@@ -1,7 +1,7 @@
 import Owner from "../assets/image/person's-image.jpeg"
 export function About(){
     return(
-        <section className="w-[90%] mx-auto my-10 grid md:grid-cols-2 gap-10 scroll-mt-[8rem]" id="about">
+        <section className="w-[90%] mx-auto my-10 grid md:grid-cols-2 gap-10 scroll-mt-[8rem] pt-16" id="about">
             <div className="w-full h-full">
                 <img src={Owner} alt="owner-image" className="w-full h-96 rounded-xl md:h-full lg:h-[30rem]"/>
             </div>

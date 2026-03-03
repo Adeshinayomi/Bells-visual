@@ -1,3 +1,4 @@
+import { HashLink } from "react-router-hash-link"
 import { useState,useEffect } from 'react';
 import LightLogo from '../assets/image/Logo-variant-light.png'
 import Menu from '../assets/image/Icons/menu-icon.svg'
@@ -43,10 +44,10 @@ export function NavBar(){
                    
                     <ul className={`${isOpen?'':'hidden'} fixed top-0 left-0 bg-primary grid items-start py-10 gap-5 w-2/3 h-screen md:relative md:h-fit md:flex gap-4 md:justify-center md:bg-transparent md:py-0`}>
                         <div className='grid h-1/2 px-4 mt-10 md:flex md:mt-0 md:gap-4 '>
-                            <li className='hover:underline underline-offset-[1rem]'><a href="#">Home</a></li>
-                            <li className=' hover:underline underline-offset-[1rem]'><a href="#about">About</a></li>
-                            <li className=' hover:underline hover:underline-offset-[1rem]'><a href="#services">Services</a></li>
-                            <li className=' hover:underline underline-offset-[1rem]'><a href="#works">Portfolio</a></li>
+                            <li className='hover:underline underline-offset-[1rem]'><HashLink smooth to="/#">Home</HashLink></li>
+                            <li className=' hover:underline underline-offset-[1rem]'><HashLink smooth to="/#about">About</HashLink></li>
+                            <li className=' hover:underline hover:underline-offset-[1rem]'><HashLink smooth to="/#services">Services</HashLink></li>
+                            <li className=' hover:underline underline-offset-[1rem]'><HashLink smooth to="portfolio">Portfolio</HashLink></li>
                         </div>    
                     </ul>  
                     

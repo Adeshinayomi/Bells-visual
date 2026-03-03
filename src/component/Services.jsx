@@ -7,7 +7,7 @@ export function Services(){
             <div className='grid gap-2'>
                 <h1 className='text-center text-3xl font-bold'>Services</h1>
                 <p className='w-5/6 mx-auto text-center text-sm font-medium'>
-                cDesigning clear,functional,and visually engaging digital solutions
+                    Designing clear,functional,and visually engaging digital solutions
                 </p>
             </div>
             <div className='grid gap-3 md:grid-cols-3'>

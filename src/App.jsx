@@ -1,27 +1,18 @@
+import { Route,Routes } from 'react-router-dom'
 import ThemeToggle from './component/ThemeToggle'
-import { NavBar } from './component/NavBar'
-import { Hero } from './component/Hero'
-import { About } from './component/About'
-import { Services } from './component/Services'
-import { Portfolio } from './component/Portfolio'
-import { Testimonial } from './component/Testimonial'
-import { Contact } from './component/Contact'
-import { Footer } from './component/Footer'
+import { Home } from './component/Home'
+import { PortfolioPage } from './component/PortfolioPage'
 import './App.css'
 
 function App() {
 
   return (
     <>
-      <NavBar />
-      <Hero />
-      <About />
-      <Services />
-      <Portfolio/>
-      <Testimonial />
-      <Contact />
-      <Footer />
-    </>
+      <Routes>
+        <Route index element={<Home/>} />
+        <Route path='portfolio' element={<PortfolioPage/>}/>
+      </Routes>    
+    </>    
   )
 }
 

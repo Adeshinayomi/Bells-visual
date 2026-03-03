@@ -17,6 +17,8 @@ export default {
         'hero':'linear-gradient(135deg, #F9FAFB 0%, #EEF2FF 100%)',
         'soft-ui':
           'radial-gradient(circle at top left, rgba(99,102,241,0.08), transparent 40%), radial-gradient(circle at bottom right, rgba(59,130,246,0.08), transparent 40%)',
+        'port':
+        "url('../assets/image/background-pattern.jpg')"  
       },
        fontFamily: {
         sans: ['Outfit', 'system-ui', 'sans-serif'],

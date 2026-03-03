@@ -10,7 +10,7 @@ import logo1 from '../assets/image/logo-1.png'
             <div className="grid gap-5 justify-center">
                 <h1 className="text-3xl font-bold text-center">Featured Works</h1>
                 <p className="text-sm w-5/6 mx-auto text-center font-medium">
-                    Take a look at some of my finest works for brands that i have worked with
+                    Take a look at some of my finest works for brands that i have worked with and help grow their business visually
                 </p>
             </div>
             <div className='w-[90%] mx-auto grid gap-5 lg:grid-cols-4 md:grid-cols-2'>
