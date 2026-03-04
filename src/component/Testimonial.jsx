@@ -1,9 +1,47 @@
+import { useState } from 'react'
 import  client from '../assets/image/client.jpg'
+import testimonyImage from '../assets/image/testimony-image.png'
+import testimonyImage2 from '../assets/image/testimony-image-2.png'
 export function Testimonial(){
+    const [count,setCount]=useState(0)
+    const [testimonies,setTestimonies]=useState([{
+     image:testimonyImage2,
+     name:'Sonusi Abiodun',
+     role:'CEO Queen scapes/ properties',
+     text:`
+        "Working with Bell's visual was great. The designs were intuitive, visually appealing, and easy for users to navigate.
+        Creative but Trustworthy
+        Bell's visual has a strong eye for detail and design. The final work exceeded expectations and communicated our message clearly."
+       `
+    },{
+     image:testimonyImage,
+     name:'Azeezat Adejoke',
+     role:'CEO Gleam by zee',
+     text:`
+       “Bell's visual was a pleasure to work with. The designs were clean, modern, and aligned perfectly with our brand goals. Communication was clear throughout the process, and the final delivery exceeded our expectations.”
+       `
+    },{
+     image:client,
+     name:'Dr. Femi Gbagada',
+     role:'CEO Royal Global',
+     text:`
+      “Bell's visual helped us turn our ideas into a clean, user-friendly design. The layout, typography, and overall experience felt intentional and well thought out. We would happily work together again.”
+       `
+    }])
+
+    const first=()=>{
+        setCount(0)
+    }
+    const second=()=>{
+        setCount(1)
+    }
+    const third=()=>{
+        setCount(2)
+    }
     return(
         <section className='grid gap-5 mt-[5rem] w-[90%] mx-auto lg:grid-cols-2 h-fit lg:flex'>
-            <div className='w-[150px] h-[150px] lg:w-full lg:h-full'>
-                <img src={client} alt="client" className='md:w-full md:h-full
+            <div className='w-[150px] h-[150px] lg:w-full lg:h-96'>
+                <img src={testimonies[count].image} alt="client" className='h-full w-full md:w-full md:h-full
                 rounded-full lg:rounded-none'/>
             </div>
             <div className='grid gap-5 items-start place-content-start'>
@@ -21,15 +59,17 @@ export function Testimonial(){
                 </svg>
                 
                 <p className='text-lg md:w-5/6'>
-                    "Working with Abbey was great. The designs were intuitive, visually appealing, and easy for users to navigate.
-                    Creative but Trustworthy
-                    Abbey has a strong eye for detail and design. The final work exceeded expectations and communicated our message clearly."
+                  {testimonies[count].text}
                 </p>
-                <h1 className='text-2xl font-bold '>Dr. Femi gbagada</h1>
+                <div className='grid gap-2'>
+                    <h1 className='text-2xl font-bold '>{testimonies[count].name}</h1>
+                    <h4 className='text-lg font-medium'>{testimonies[count].role}</h4>
+                </div>
+                
                 <div className='flex gap-2'>
-                    <button className='px-[3rem] py-2 bg-accent'></button>
-                    <button className='px-[3rem] py-2 bg-gray-200'></button>
-                    <button className='px-[3rem] py-2 bg-gray-200'></button>
+                    <button className={`px-[3rem] py-2 ${count === 0?'bg-accent':'bg-gray-200'}`} onClick={first}></button>
+                    <button className={`px-[3rem] py-2 ${count === 1?'bg-accent':'bg-gray-200'}`} onClick={second}></button>
+                    <button className={`px-[3rem] py-2 ${count === 2?'bg-accent':'bg-gray-200'}`} onClick={third}></button>
                 </div>
             </div>
         </section>
