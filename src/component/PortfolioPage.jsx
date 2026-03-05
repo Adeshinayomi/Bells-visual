@@ -10,7 +10,9 @@ import logo3 from '../assets/image/logo-3.png'
 import { NavBar } from "./NavBar"
 import { Contact } from './Contact'
 import { Footer } from './Footer'
+
 export function PortfolioPage(){
+    const [current,setCurrent]=useState('all')
     const [modal,setModal]=useState({})
 
     const hideImage=()=>{
@@ -43,40 +45,43 @@ export function PortfolioPage(){
                 </section>
             </main>
             <div className='w-[90%] mx-auto flex gap-4 p-4 pt-16 mb-10'>
-                <button className='w-fit ease-in duration-30 underline underline-offset-[.5rem] decoration-2'>All</button>
-                <button className='w-fit ease-in duration-30 hover:underline hover:underline-offset-[.5rem] decoration-2'>Flyers</button>
-                <button className='w-fit ease-in duration-30 hover:underline hover:underline-offset-[.5rem] decoration-2'>Logos</button>
+                <button className={`${current === 'all'?'underline underline-offset-[.5rem]':''} hover:underline hover:underline-offset-[.5rem]  w-fit ease-in duration-30  underline-offset-[.5rem] decoration-2`} onClick={()=>{
+                    setCurrent('all')}}>All</button>
+                <button className={`${current === 'flyers'?'underline underline-offset-[.5rem]':''} hover:underline hover:underline-offset-[.5rem]  w-fit ease-in duration-30  underline-offset-[.5rem] decoration-2`} onClick={()=>{
+                    setCurrent('flyers')}}>Flyers</button>
+                <button className={`${current === 'logo'?'underline underline-offset-[.5rem]':''} hover:underline hover:underline-offset-[.5rem]  w-fit ease-in duration-30  underline-offset-[.5rem] decoration-2`} onClick={()=>{
+                    setCurrent('logo')}}>Logos</button>
             </div>
             <div className='w-[90%] mx-auto grid gap-5 lg:grid-cols-3 md:grid-cols-2'>
-                <div className='relative overflow-hidden rounded-xl'>
+                <div className={`${current === 'all' || current === 'flyers'?'':'hidden'} relative overflow-hidden rounded-xl`} id='flyer'>
                     <img src={graphics1} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125' onClick={showImage}/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
                 </div>
-                <div className='relative overflow-hidden rounded-xl'>
+                <div className={`${current === 'all' || current === 'flyers'?'':'hidden'} relative overflow-hidden rounded-xl`} id='flyer'>
                     <img src={graphics2} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125' onClick={showImage}/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
                 </div>
-                <div className='relative overflow-hidden rounded-xl md:h-full'>
+                <div className={`${current === 'all' || current === 'logo'?'':'hidden'} relative overflow-hidden rounded-xl md:h-full`} id='logo'>
                     <img src={logo1} alt="first-graphic" className='md:h-full ease-in duration-300 rounded-xl brightness-50 hover:scale-125'onClick={showImage}/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Logo</span>
                 </div>
-                <div className='relative overflow-hidden rounded-xl '>
+                <div className={`${current === 'all' || current === 'flyers'?'':'hidden'} relative overflow-hidden rounded-xl`} id='flyer'>
                     <img src={graphics3} alt="first-graphic" className=' ease-in duration-300 rounded-xl brightness-50 hover:scale-125' onClick={showImage}/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
                 </div>
-                <div className='relative overflow-hidden rounded-xl md:h-full'>
+                <div className={`${current === 'all' || current === 'logo'?'':'hidden'} relative overflow-hidden rounded-xl md:h-full`} id='logo'>
                     <img src={logo3} alt="first-graphic" className='md:h-full ease-in duration-300 rounded-xl brightness-50 hover:scale-125' onClick={showImage}/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Logo</span>
                 </div>
-                <div className='relative overflow-hidden rounded-xl'>
+                <div className={`${current === 'all' || current === 'flyers'?'':'hidden'} relative overflow-hidden rounded-xl`} id='flyer'>
                     <img src={graphics4} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125' onClick={showImage}/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
                 </div>
-                <div className='relative overflow-hidden rounded-xl md:h-full'>
+                <div className={`${current === 'all' || current === 'logo'?'':'hidden'} relative overflow-hidden rounded-xl md:h-full`} id='logo'>
                     <img src={logo2} alt="first-graphic" className='md:h-full ease-in duration-300 rounded-xl brightness-50 hover:scale-125' onClick={showImage}/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Logo</span>
                 </div>
-                <div className='relative overflow-hidden rounded-xl'>
+                <div className={`${current === 'all' || current === 'flyers'?'':'hidden'} relative overflow-hidden rounded-xl`} id='flyer'>
                     <img src={graphic5} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125' onClick={showImage}/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
                 </div>
