@@ -1,13 +1,14 @@
-import { useState } from 'react'
-import  client from '../assets/image/client.jpg'
+import { useState,useEffect,useRef } from 'react'
 import testimonyImage from '../assets/image/testimony-image.png'
 import testimonyImage2 from '../assets/image/testimony-image-2.png'
 export function Testimonial(){
     const [count,setCount]=useState(0)
+    const imageDiv=useRef(null)
+    const textDiv=useRef(null)
     const [testimonies,setTestimonies]=useState([{
      image:testimonyImage2,
      name:'Sonusi Abiodun',
-     role:'CEO Queen scapes/ properties',
+     role:'Realtor Queen scapes/ properties',
      text:`
         "Working with Bell's visual was great. The designs were intuitive, visually appealing, and easy for users to navigate.
         Creative but Trustworthy
@@ -21,13 +22,31 @@ export function Testimonial(){
        “Bell's visual was a pleasure to work with. The designs were clean, modern, and aligned perfectly with our brand goals. Communication was clear throughout the process, and the final delivery exceeded our expectations.”
        `
     },{
-     image:client,
+     image:'',
      name:'Dr. Femi Gbagada',
      role:'CEO Royal Global',
      text:`
       “Bell's visual helped us turn our ideas into a clean, user-friendly design. The layout, typography, and overall experience felt intentional and well thought out. We would happily work together again.”
        `
     }])
+
+
+
+    useEffect(()=>{
+        imageDiv.current.classList.add('md:animate-wiggle')
+        imageDiv.current.classList.add('animate-show')
+        setTimeout(()=>{
+            imageDiv.current.classList.remove('md:animate-wiggle')
+            imageDiv.current.classList.remove('animate-show')
+        },1000)
+    },[count])
+
+    useEffect(()=>{
+        textDiv.current.classList.add('animate-show')
+        setTimeout(()=>{
+            textDiv.current.classList.remove('animate-show')
+        },1000)
+    },[count])
 
     const first=()=>{
         setCount(0)
@@ -40,12 +59,11 @@ export function Testimonial(){
     }
     return(
         <section className='grid gap-5 mt-[5rem] w-[90%] mx-auto lg:grid-cols-2 h-fit lg:flex'>
-            <div className='w-[150px] h-[150px] lg:w-full lg:h-96'>
-                <img src={testimonies[count].image} alt="client" className='h-full w-full md:w-full md:h-full
-                rounded-full lg:rounded-none'/>
-            </div>
-            <div className='grid gap-5 items-start place-content-start'>
-                <svg className='h-16 w-16 fill-accent' fill="none" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+            
+            <img src={testimonies[count].image} alt="client" ref={imageDiv} className=' lg:w-1/3 transition ease-in duration-300 w-[100px] h-[100px] rounded-full lg:w-1/3 lg:h-80 lg:rounded-none'/>
+            
+            <div className='grid gap-5 items-start place-content-start lg:w-5/6' >
+                <svg className='h-16 w-16 fill-accent' fill="none" version="1.1" ref={textDiv} id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                      viewBox="0 0 123.961 123.961"
                     xml:space="preserve">
                     <g>
@@ -58,10 +76,10 @@ export function Testimonial(){
                     </g>
                 </svg>
                 
-                <p className='text-lg md:w-5/6'>
+                <p className='ease-in duration-300 text-lg md:w-5/6' ref={textDiv}>
                   {testimonies[count].text}
                 </p>
-                <div className='grid gap-2'>
+                <div className='grid gap-2' ref={textDiv}>
                     <h1 className='text-2xl font-bold '>{testimonies[count].name}</h1>
                     <h4 className='text-lg font-medium'>{testimonies[count].role}</h4>
                 </div>
@@ -69,7 +87,7 @@ export function Testimonial(){
                 <div className='flex gap-2'>
                     <button className={`px-[3rem] py-2 ${count === 0?'bg-accent':'bg-gray-200'}`} onClick={first}></button>
                     <button className={`px-[3rem] py-2 ${count === 1?'bg-accent':'bg-gray-200'}`} onClick={second}></button>
-                    <button className={`px-[3rem] py-2 ${count === 2?'bg-accent':'bg-gray-200'}`} onClick={third}></button>
+                    {/* <button className={`px-[3rem] py-2 ${count === 2?'bg-accent':'bg-gray-200'}`} onClick={third}></button> */}
                 </div>
             </div>
         </section>

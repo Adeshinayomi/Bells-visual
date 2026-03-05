@@ -7,6 +7,20 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+        wiggle: {
+          '0%': { transform: 'translate(-50%)' },
+          '100%': { transform: 'translate(0)' },
+        },
+        show:{
+          '0%': { opacity:'0' },
+          '100%': { opacity:'1' },
+        }
+      },
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out 1',
+        show:'show 1s ease-in-out 1'
+      },
       colors:{
         primary:'#F9FAFB',
         secondary:'#000000',

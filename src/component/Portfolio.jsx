@@ -32,7 +32,7 @@ import logo1 from '../assets/image/logo-1.png'
                 </div>
             </div>
             <button className='ease-in duration-300 group bg-accent px-6 py-2 justify-self-center flex gap-2 text-white items-center rounded-xl mb-10 hover:bg-transparent hover:border-2 hover:border-accent hover:text-accent'>
-                <span className='text-lg font-medium'>View all</span>
+                <span className='text-lg font-medium'><a href="portfolio">View All</a></span>
                 <svg className=" h-10 w-6 stroke-white ease-in duration-300 group-hover:stroke-accent" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg" strokeWidth={2}>
                     <path d="M5 12H19M19 12L13 6M19 12L13 18" />
                 </svg>

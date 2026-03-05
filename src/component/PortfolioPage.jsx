@@ -12,9 +12,8 @@ import { Footer } from './Footer'
 export function PortfolioPage(){
     return(
         <>
-            <NavBar/>
-
-            <main className="pt-16 ">
+            <main className="pt-16 bg-hero">
+                <NavBar/>
                 <section className='bg-hero'>
                     <div className=" w-[80%]  mx-auto grid gap-5 justify-start items-center place-content-center md:h-screen h-[70vh]">
                         <span className="font-medium text-sm">portfolio</span>
@@ -31,49 +30,49 @@ export function PortfolioPage(){
                         </button>
                     </div>
                 </section>
-                
-                <div className='w-[90%] mx-auto flex gap-4 p-4 pt-16 mb-10'>
-                    <button className='w-fit ease-in duration-30 underline underline-offset-[.5rem] decoration-2'>All</button>
-                    <button className='w-fit ease-in duration-30 hover:underline hover:underline-offset-[.5rem] decoration-2'>Flyers</button>
-                    <button className='w-fit ease-in duration-30 hover:underline hover:underline-offset-[.5rem] decoration-2'>Logos</button>
-                </div>
-                <div className='w-[90%] mx-auto grid gap-5 lg:grid-cols-3 md:grid-cols-2'>
-                    <div className='relative overflow-hidden rounded-xl'>
-                        <img src={graphics1} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
-                        <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
-                    </div>
-                    <div className='relative overflow-hidden rounded-xl'>
-                        <img src={graphics2} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
-                        <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
-                    </div>
-                    <div className='relative overflow-hidden rounded-xl md:h-full'>
-                        <img src={logo1} alt="first-graphic" className='md:h-full ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
-                        <span className='absolute bottom-4 right-2 text-white text-2xl'>Logo</span>
-                    </div>
-                    <div className='relative overflow-hidden rounded-xl '>
-                        <img src={graphics3} alt="first-graphic" className=' ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
-                        <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
-                    </div>
-                    <div className='relative overflow-hidden rounded-xl md:h-full'>
-                        <img src={logo3} alt="first-graphic" className='md:h-full ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
-                        <span className='absolute bottom-4 right-2 text-white text-2xl'>Logo</span>
-                    </div>
-                    <div className='relative overflow-hidden rounded-xl'>
-                        <img src={graphics4} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
-                        <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
-                    </div>
-                    <div className='relative overflow-hidden rounded-xl md:h-full'>
-                        <img src={logo2} alt="first-graphic" className='md:h-full ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
-                        <span className='absolute bottom-4 right-2 text-white text-2xl'>Logo</span>
-                    </div>
-                    <div className='relative overflow-hidden rounded-xl'>
-                        <img src={graphic5} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
-                        <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
-                    </div>
-                </div>
-                <Contact/>
-                <Footer/>
             </main>
+            <div className='w-[90%] mx-auto flex gap-4 p-4 pt-16 mb-10'>
+                <button className='w-fit ease-in duration-30 underline underline-offset-[.5rem] decoration-2'>All</button>
+                <button className='w-fit ease-in duration-30 hover:underline hover:underline-offset-[.5rem] decoration-2'>Flyers</button>
+                <button className='w-fit ease-in duration-30 hover:underline hover:underline-offset-[.5rem] decoration-2'>Logos</button>
+            </div>
+            <div className='w-[90%] mx-auto grid gap-5 lg:grid-cols-3 md:grid-cols-2'>
+                <div className='relative overflow-hidden rounded-xl'>
+                    <img src={graphics1} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
+                    <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
+                </div>
+                <div className='relative overflow-hidden rounded-xl'>
+                    <img src={graphics2} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
+                    <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
+                </div>
+                <div className='relative overflow-hidden rounded-xl md:h-full'>
+                    <img src={logo1} alt="first-graphic" className='md:h-full ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
+                    <span className='absolute bottom-4 right-2 text-white text-2xl'>Logo</span>
+                </div>
+                <div className='relative overflow-hidden rounded-xl '>
+                    <img src={graphics3} alt="first-graphic" className=' ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
+                    <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
+                </div>
+                <div className='relative overflow-hidden rounded-xl md:h-full'>
+                    <img src={logo3} alt="first-graphic" className='md:h-full ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
+                    <span className='absolute bottom-4 right-2 text-white text-2xl'>Logo</span>
+                </div>
+                <div className='relative overflow-hidden rounded-xl'>
+                    <img src={graphics4} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
+                    <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
+                </div>
+                <div className='relative overflow-hidden rounded-xl md:h-full'>
+                    <img src={logo2} alt="first-graphic" className='md:h-full ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
+                    <span className='absolute bottom-4 right-2 text-white text-2xl'>Logo</span>
+                </div>
+                <div className='relative overflow-hidden rounded-xl'>
+                    <img src={graphic5} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
+                    <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
+                </div>
+            </div>
+            <Contact/>
+            <Footer/>
+        
         </>
     )
 }
