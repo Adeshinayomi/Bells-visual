@@ -1,11 +1,11 @@
 import { useEffect,useState,useRef } from "react";
 import Owner from "../assets/image/person's-image.jpeg"
 export function About(){
-    const years=3
-    const works=25
-    const client=15
-    const [scroll,setScrolled]=useState(false)
-      const sectionRef = useRef(null);
+   const years=3
+   const works=25
+   const client=15
+   const [scroll,setScrolled]=useState(false)
+   const sectionRef = useRef(null);
    const [count, setCount] = useState(0);
    const [workcount, setWorkcount] = useState(0);
    const [clientcount, setClientcount] = useState(0);
