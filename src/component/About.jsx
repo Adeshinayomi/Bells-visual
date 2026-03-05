@@ -1,7 +1,84 @@
+import { useEffect,useState,useRef } from "react";
 import Owner from "../assets/image/person's-image.jpeg"
 export function About(){
+    const years=3
+    const works=25
+    const client=15
+    const [scroll,setScrolled]=useState(false)
+      const sectionRef = useRef(null);
+   const [count, setCount] = useState(0);
+   const [workcount, setWorkcount] = useState(0);
+   const [clientcount, setClientcount] = useState(0);
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setScrolled(entry.isIntersecting);
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            
+            if(scroll){
+                setCount(prev => {
+                    if (prev === years) {
+                    clearInterval(intervalId);
+                    return prev;
+                    }
+                    return prev + 1;
+                });
+            }
+
+        }, 100);
+
+        return () => clearInterval(intervalId);
+    }, [scroll]);
+    useEffect(() => {
+        const intervalId = setInterval(() => {     
+            if(scroll){
+                setWorkcount(prev => {
+                    if (prev === works) {
+                    clearInterval(intervalId);
+                    return prev;
+                    }
+                    return prev + 1;
+                })                
+            }
+
+        }, 100);
+
+        return () => clearInterval(intervalId);
+    }, [scroll]);
+        useEffect(() => {
+        const intervalId = setInterval(() => {     
+            if(scroll){
+                setClientcount(prev => {
+                    if (prev === client) {
+                    clearInterval(intervalId);
+                    return prev;
+                    }
+                    return prev + 1;
+                })
+            }
+
+        }, 100);
+
+        return () => clearInterval(intervalId);
+    }, [scroll]);
+
+
     return(
-        <section className="w-[90%] mx-auto my-10 grid md:grid-cols-2 gap-10 scroll-mt-[8rem] pt-16" id="about">
+        <section ref={sectionRef} className="w-[90%] mx-auto my-10 grid md:grid-cols-2 gap-10 scroll-mt-[8rem] pt-16" id="about">
             <div className="w-full h-full">
                 <img src={Owner} alt="owner-image" className="w-full h-96 rounded-xl md:h-full lg:h-[30rem]"/>
             </div>
@@ -15,15 +92,15 @@ export function About(){
                 </p>
                 <div className="flex gap-2">
                 <div className="p-4 grid justify-center shadow-xl">
-                    <h1 className="text-xl font-bold text-center">3+</h1>
+                    <h1 className="text-xl font-bold text-center"> {count}+</h1>
                     <span className="text-center">Years experience</span>
                 </div>
                 <div className="p-4 grid justify-center shadow-xl">
-                    <h1 className="text-xl font-bold text-center">25+</h1>
+                    <h1 className="text-xl font-bold text-center">{workcount}+</h1>
                     <span className="text-center">Project done</span>
                 </div>
                 <div className="p-4 grid justify-center shadow-xl">
-                    <h1 className="text-xl font-bold text-center">15+</h1>
+                    <h1 className="text-xl font-bold text-center">{clientcount}+</h1>
                     <span className="text-center">Happy client</span>
                 </div>
             </div>
