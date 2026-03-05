@@ -1,10 +1,22 @@
+import { useState } from 'react'
 import graphics1 from '../assets/image/graphics-3.png'
-import graphics2 from '../assets/image/graphics-4.png'
 import graphics3 from '../assets/image/graphics-5.png'
 import graphics4 from '../assets/image/graphics-2.png'
 import logo1 from '../assets/image/logo-1.png'
+import close from '../assets/image/Icons/close-icon.svg'
+
  
  export function Portfolio(){
+    const [modal,setModal]=useState({})
+
+    const hideImage=()=>{
+        setModal({})
+    }
+    const showImage=(event)=>{
+        setModal({
+           image:event.target.src
+        })
+    }
     return(
         <section className="bg-hero grid gap-8 justidy-center mt-[10rem] scroll-mt-[8rem]" id='works'>
             <div className="grid gap-5 justify-center">
@@ -14,19 +26,19 @@ import logo1 from '../assets/image/logo-1.png'
                 </p>
             </div>
             <div className='w-[90%] mx-auto grid gap-5 lg:grid-cols-4 md:grid-cols-2'>
-                <div className='relative overflow-hidden rounded-xl'>
+                <div className='relative overflow-hidden rounded-xl' onClick={showImage}>
                     <img src={graphics1} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
                 </div>
-                <div className='relative overflow-hidden rounded-xl'>
+                <div className='relative overflow-hidden rounded-xl' onClick={showImage}>
                     <img src={graphics3} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
                 </div>
-                <div className='relative overflow-hidden rounded-xl md:h-full'>
+                <div className='relative overflow-hidden rounded-xl md:h-full' onClick={showImage}>
                     <img src={logo1} alt="first-graphic" className='md:h-full ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Logo</span>
                 </div>
-                <div className='relative overflow-hidden rounded-xl'>
+                <div className='relative overflow-hidden rounded-xl' onClick={showImage}>
                     <img src={graphics4} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
                 </div>
@@ -37,6 +49,21 @@ import logo1 from '../assets/image/logo-1.png'
                     <path d="M5 12H19M19 12L13 6M19 12L13 18" />
                 </svg>
             </button>
+
+            {Object.keys(modal).length >0?<div className='fixed top-0 w-full h-screen bg-black z-20 opacity-75'>
+
+            </div>:''}
+            {Object.keys(modal).length >0?<div className='fixed top-0 z-20 w-full h-screen flex items-center'>
+                <div className='relative w-5/6 mx-auto h-1/2 md:h-2/3 lg:h-2/3 flex flex-col justify-center items-center gap-4'>
+                    <svg className="w-10 h-10 absolute -top-20 right-0 md:-top-10 right-0" viewBox="0 0 32 32" fill="#FFFF"  onClick={hideImage}>
+                        <line x1="7" y1="7" x2="25" y2="25" stroke="#FFFFFF" strokeWidth="4"/>
+                        <line x1="7" y1="25" x2="25" y2="7" stroke="#FFFFFF" strokeWidth="4"/>
+                    </svg>
+                   
+                    <img src={modal.image} alt="current-image" className='h-full'/>
+                </div>
+                
+            </div>:''}
         </section>
     )
 }

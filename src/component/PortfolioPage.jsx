@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import graphics1 from '../assets/image/graphics-3.png'
 import graphics2 from '../assets/image/graphics-4.png'
 import graphics3 from '../assets/image/graphics-1.png'
@@ -10,6 +11,16 @@ import { NavBar } from "./NavBar"
 import { Contact } from './Contact'
 import { Footer } from './Footer'
 export function PortfolioPage(){
+    const [modal,setModal]=useState({})
+
+    const hideImage=()=>{
+        setModal({})
+    }
+    const showImage=(event)=>{
+        setModal({
+           image:event.target.src
+        })
+    }
     return(
         <>
             <main className="pt-16 bg-hero">
@@ -38,41 +49,54 @@ export function PortfolioPage(){
             </div>
             <div className='w-[90%] mx-auto grid gap-5 lg:grid-cols-3 md:grid-cols-2'>
                 <div className='relative overflow-hidden rounded-xl'>
-                    <img src={graphics1} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
+                    <img src={graphics1} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125' onClick={showImage}/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
                 </div>
                 <div className='relative overflow-hidden rounded-xl'>
-                    <img src={graphics2} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
+                    <img src={graphics2} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125' onClick={showImage}/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
                 </div>
                 <div className='relative overflow-hidden rounded-xl md:h-full'>
-                    <img src={logo1} alt="first-graphic" className='md:h-full ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
+                    <img src={logo1} alt="first-graphic" className='md:h-full ease-in duration-300 rounded-xl brightness-50 hover:scale-125'onClick={showImage}/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Logo</span>
                 </div>
                 <div className='relative overflow-hidden rounded-xl '>
-                    <img src={graphics3} alt="first-graphic" className=' ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
+                    <img src={graphics3} alt="first-graphic" className=' ease-in duration-300 rounded-xl brightness-50 hover:scale-125' onClick={showImage}/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
                 </div>
                 <div className='relative overflow-hidden rounded-xl md:h-full'>
-                    <img src={logo3} alt="first-graphic" className='md:h-full ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
+                    <img src={logo3} alt="first-graphic" className='md:h-full ease-in duration-300 rounded-xl brightness-50 hover:scale-125' onClick={showImage}/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Logo</span>
                 </div>
                 <div className='relative overflow-hidden rounded-xl'>
-                    <img src={graphics4} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
+                    <img src={graphics4} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125' onClick={showImage}/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
                 </div>
                 <div className='relative overflow-hidden rounded-xl md:h-full'>
-                    <img src={logo2} alt="first-graphic" className='md:h-full ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
+                    <img src={logo2} alt="first-graphic" className='md:h-full ease-in duration-300 rounded-xl brightness-50 hover:scale-125' onClick={showImage}/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Logo</span>
                 </div>
                 <div className='relative overflow-hidden rounded-xl'>
-                    <img src={graphic5} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125'/>
+                    <img src={graphic5} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125' onClick={showImage}/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
                 </div>
             </div>
             <Contact/>
             <Footer/>
-        
+            {Object.keys(modal).length >0?<div className='fixed top-0 w-full h-screen bg-black z-20 opacity-75'>
+
+            </div>:''}
+            {Object.keys(modal).length >0?<div className='fixed top-0 z-20 w-full h-screen flex items-center'>
+                <div className='relative w-5/6 mx-auto h-1/2 md:h-2/3 lg:h-2/3 flex flex-col justify-center items-center gap-4'>
+                    <svg className="w-10 h-10 absolute -top-20 right-0 md:-top-10 right-0" viewBox="0 0 32 32" fill="#FFFF"  onClick={hideImage}>
+                        <line x1="7" y1="7" x2="25" y2="25" stroke="#FFFFFF" strokeWidth="4"/>
+                        <line x1="7" y1="25" x2="25" y2="7" stroke="#FFFFFF" strokeWidth="4"/>
+                    </svg>
+                   
+                    <img src={modal.image} alt="current-image" className='h-full'/>
+                </div>
+                
+            </div>:''}
         </>
     )
 }
