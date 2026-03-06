@@ -1,16 +1,23 @@
 import { useState,useEffect } from 'react'
+import { useLocation } from 'react-router-dom';
 import logo from '../assets/image/Logo-variant-light.png'
+
 export function Loader(){
   const [loading, setLoading] = useState(true);
 
+  const location = useLocation();
+
   useEffect(() => {
-    window.addEventListener("load", () => {
-      setTimeout(()=>{
-         setLoading(false);
-      },2000)
-     
-    });
-  }, []);
+    if (location.pathname === "/") {
+      setLoading(true);
+
+      const timer = setTimeout(() => {
+        setLoading(false);
+      },2000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [location.pathname]);
 
     return(
         loading?

@@ -1,11 +1,21 @@
 import { HashLink } from "react-router-hash-link"
 import { useState,useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import LightLogo from '../assets/image/Logo-variant-light.png'
 import DarkLogo from '../assets/image/Logo-variant-dark.png'
 import ThemeToggle from "./ThemeToggle";
 export function NavBar(){
     const [isOpen,setIsOpen]=useState(false)
+    const [current,setCurrent]=useState('home')
     const [scrolled, setScrolled] = useState(false);
+
+    const location = useLocation();
+
+      useEffect(() => {
+    if (location.pathname === "/portfolio") {
+        setCurrent('portfolio')
+    }
+  }, [location.pathname]);
 
     function ToggleMenu(){
         console.log('clicked')
@@ -52,10 +62,22 @@ export function NavBar(){
                     <ul className={`${isOpen?'':'hidden'} dark:bg-accent fixed top-0 left-0 bg-primary grid items-start py-10 gap-5 md:w-2/3 w-full h-screen md:relative md:h-fit md:flex gap-4 md:justify-center md:bg-transparent dark:md:bg-transparent md:py-0`}>
 
                         <div className='grid h-1/2 px-4 mt-10 md:flex md:mt-0 md:gap-4 '>
-                            <li className='md:hover:underline md:underline-offset-[1rem] dark:text-White' ><HashLink smooth to="/#" onClick={closeMenu}>Home</HashLink></li>
-                            <li className='md: hover:underlinemd: underline-offset-[1rem] dark:text-White' ><HashLink smooth to="/#about" onClick={closeMenu}>About</HashLink></li>
-                            <li className='md: hover:underlinemd: underline-offset-[1rem] dark:text-White' ><HashLink smooth to="/#services" onClick={closeMenu}>Services</HashLink></li>
-                            <li className='md: hover:underlinemd: underline-offset-[1rem] dark:text-White'><HashLink smooth to="/portfolio" onClick={closeMenu}>Portfolio</HashLink></li>
+                            <li className={`${current === 'home'?'underline':''} md:hover:underline md:underline-offset-[1rem] dark:text-White`} ><HashLink smooth to="/#" onClick={()=>{
+                                closeMenu
+                                setCurrent('home')
+                            } }>Home</HashLink></li>
+                            <li className={`${current === 'about'?'underline':''} md:hover:underline md:underline-offset-[1rem] dark:text-White`}  ><HashLink smooth to="/#about" onClick={()=>{
+                                closeMenu
+                                setCurrent('about')
+                            } }>About</HashLink></li>
+                            <li className={`${current === 'services'?'underline':''} md:hover:underline md:underline-offset-[1rem] dark:text-White`} ><HashLink smooth to="/#services" onClick={()=>{
+                                closeMenu
+                                setCurrent('services')
+                            } }>Services</HashLink></li>
+                            <li className={`${current === 'portfolio'?'underline':''} md:hover:underline md:underline-offset-[1rem] dark:text-White`} ><HashLink smooth to="/portfolio" onClick={()=>{
+                                closeMenu
+                                setCurrent('portfolio')
+                            } }>Portfolio</HashLink></li>
                         </div>    
                     </ul>  
                     
