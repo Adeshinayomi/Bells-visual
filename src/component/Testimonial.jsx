@@ -37,13 +37,13 @@ export function Testimonial() {
   ]);
 
   useEffect(() => {
-    imageDiv.current.classList.add("md:animate-wiggle");
+    imageDiv.current.classList.add("lg:animate-wiggle");
     imageDiv.current.classList.add("animate-show");
     textDiv.current.classList.add("animate-show");
     nameDiv.current.classList.add("animate-show");
     btnDiv.current.classList.add("animate-show");
     setTimeout(() => {
-      imageDiv.current.classList.remove("md:animate-wiggle");
+      imageDiv.current.classList.remove("lg:animate-wiggle");
       imageDiv.current.classList.remove("animate-show");
       textDiv.current.classList.remove("animate-show");
       nameDiv.current.classList.remove("animate-show");

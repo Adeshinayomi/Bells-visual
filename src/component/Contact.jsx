@@ -31,9 +31,9 @@ export function Contact(){
         .catch(() => {
             setLoading(false)
             setError(true)
-            setTimeout(()=>{
-                setError(false)
-            },3000)
+            // setTimeout(()=>{
+            //     setError(false)
+            // },3000)
         })
        
     }
