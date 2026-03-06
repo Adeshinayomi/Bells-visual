@@ -3,6 +3,7 @@ import { useState,useEffect } from 'react';
 import LightLogo from '../assets/image/Logo-variant-light.png'
 import Menu from '../assets/image/Icons/menu-icon.svg'
 import close from '../assets/image/Icons/close-icon.svg'
+import ThemeToggle from "./ThemeToggle";
 export function NavBar(){
     const [isOpen,setIsOpen]=useState(false)
     const [scrolled, setScrolled] = useState(false);
@@ -50,9 +51,10 @@ export function NavBar(){
                         </div>    
                     </ul>  
                     
-                    <div>
-                        <img src={Menu} alt="Menu-bar" width={70} className={`${isOpen?'hidden':''} relative md:hidden z-20 `}onClick={ToggleMenu}/>
-                        <img src={close} alt="Menu-bar" width={70} className={`${isOpen?'':'hidden'} relative md:hidden z-20`}onClick={ToggleMenu}/>
+                    <div className="flex gap-3 items-center">
+                        <ThemeToggle/>
+                        <img src={Menu} alt="Menu-bar" width={50} className={`${isOpen?'hidden':''} relative md:hidden z-20 `}onClick={ToggleMenu}/>
+                        <img src={close} alt="Menu-bar" width={50} className={`${isOpen?'':'hidden'} relative md:hidden z-20`}onClick={ToggleMenu}/>
 
                         <button className="hidden md:flex group ease-in duration-300 flex items-center bg-accent text-White px-4 py-2 rounded-lg gap-2 hover:bg-transparent hover:text-accent hover:border-2 hover:border-accent">
                             <span className="text-md font-medium group-hover:"><a href="#contact">Get In Touch</a></span>
