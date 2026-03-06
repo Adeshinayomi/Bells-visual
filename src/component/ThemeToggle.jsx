@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 
 export function ThemeToggle() {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(() => {
+    return JSON.parse(localStorage.getItem("dark")) || false;
+  });
 
   useEffect(() => {
     if (dark) {
@@ -9,7 +11,10 @@ export function ThemeToggle() {
     } else {
       document.documentElement.classList.remove("dark");
     }
+
+    localStorage.setItem("dark", JSON.stringify(dark));
   }, [dark]);
+
 
   return (
     <button

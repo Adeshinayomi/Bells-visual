@@ -1,7 +1,12 @@
 import emailjs from "@emailjs/browser";
 import { useRef,useState } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 export function Contact(){
-    
+    AOS.init({  duration: 400,
+    easing: 'ease',
+    once:true,})
+
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState(false)
@@ -41,7 +46,7 @@ export function Contact(){
 
 
     return(
-        <form action="none" ref={form} className="w-[90%] md:w-[80%] lg:w-[60%] mx-auto mt-[7rem] grid gap-10 scroll-mt-[8rem]" id="contact" onSubmit={sendEmail}>
+        <form action="none" ref={form} className="w-[90%] md:w-[80%] lg:w-[60%] mx-auto mt-[7rem] grid gap-10 scroll-mt-[8rem]" id="contact" onSubmit={sendEmail} data-aos='fade-up' data-aos-delay="50">
             <div className="grid gap-5 lg:w-1/2 lg:mx-auto">
                 <h1 className="text-3xl font-bold md:text-center md:text-4xl dark:text-White">Got a project? <br />
                     Let's Talk

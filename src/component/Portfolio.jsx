@@ -1,12 +1,16 @@
 import { useState } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import graphics1 from '../assets/image/graphics-3.png'
 import graphics3 from '../assets/image/graphics-5.png'
 import graphics4 from '../assets/image/graphics-2.png'
 import logo1 from '../assets/image/logo-1.png'
-import close from '../assets/image/Icons/close-icon.svg'
-
  
  export function Portfolio(){
+        AOS.init({  duration: 400,
+          easing: 'ease',
+          once:true,})
+
     const [modal,setModal]=useState({})
 
     const hideImage=()=>{
@@ -18,7 +22,8 @@ import close from '../assets/image/Icons/close-icon.svg'
         })
     }
     return(
-        <section className="bg-hero dark:bg-hero-dark grid gap-8 justidy-center mt-[10rem] scroll-mt-[8rem]" id='works'>
+        <>
+        <section className="bg-hero dark:bg-hero-dark grid gap-8 justidy-center mt-[10rem] scroll-mt-[8rem]" id='works' data-aos='fade-up' data-aos-delay="50">
             <div className="grid gap-5 justify-center">
                 <h1 className="text-3xl font-bold text-center dark:text-White">Featured Works</h1>
                 <p className="text-sm w-5/6 mx-auto text-center font-medium dark:text-White">
@@ -50,6 +55,8 @@ import close from '../assets/image/Icons/close-icon.svg'
                 </svg>
             </button>
 
+
+        </section>
             {Object.keys(modal).length >0?<div className='fixed top-0 w-full h-screen bg-black z-20 opacity-75'>
 
             </div>:''}
@@ -64,6 +71,6 @@ import close from '../assets/image/Icons/close-icon.svg'
                 </div>
                 
             </div>:''}
-        </section>
+            </>
     )
 }

@@ -2,8 +2,6 @@ import { HashLink } from "react-router-hash-link"
 import { useState,useEffect } from 'react';
 import LightLogo from '../assets/image/Logo-variant-light.png'
 import DarkLogo from '../assets/image/Logo-variant-dark.png'
-import Menu from '../assets/image/Icons/menu-icon.svg'
-import close from '../assets/image/Icons/close-icon.svg'
 import ThemeToggle from "./ThemeToggle";
 export function NavBar(){
     const [isOpen,setIsOpen]=useState(false)
@@ -45,10 +43,10 @@ export function NavBar(){
                 </div>
                 <div className='w-full md:w-[90%] mx-auto flex justify-between items-center '>
                     <div className="dark:hidden">
-                        <a href="#"><img src={LightLogo} alt="light-logo" width={70} /></a>
+                        <a href="/#"><img src={LightLogo} alt="light-logo" width={70} /></a>
                     </div>
                     <div className="hidden dark:grid  items-center">
-                        <a href="#"><img src={DarkLogo} alt="dark-logo" width={80} /></a>
+                        <a href="/#"><img src={DarkLogo} alt="dark-logo" width={80} /></a>
                     </div>
 
                     <ul className={`${isOpen?'':'hidden'} dark:bg-accent fixed top-0 left-0 bg-primary grid items-start py-10 gap-5 md:w-2/3 w-full h-screen md:relative md:h-fit md:flex gap-4 md:justify-center md:bg-transparent dark:md:bg-transparent md:py-0`}>

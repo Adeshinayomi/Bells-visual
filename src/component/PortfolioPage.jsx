@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import graphics1 from '../assets/image/graphics-3.png'
 import graphics2 from '../assets/image/graphics-4.png'
 import graphics3 from '../assets/image/graphics-1.png'
@@ -12,6 +14,10 @@ import { Contact } from './Contact'
 import { Footer } from './Footer'
 
 export function PortfolioPage(){
+    AOS.init({  duration: 400,
+    easing: 'ease',
+    once:true})
+
     const [current,setCurrent]=useState('all')
     const [modal,setModal]=useState({})
 
@@ -28,15 +34,15 @@ export function PortfolioPage(){
             <main className="pt-16 bg-hero dark:bg-hero-dark dark:text-White">
                 <NavBar/>
                 <section>
-                    <div className=" w-[80%]  mx-auto grid gap-5 justify-start items-center place-content-center md:h-screen h-[70vh]">
-                        <span className="font-medium text-sm">portfolio</span>
-                        <h1 className="text-4xl font-medium">All Projects</h1>
-                        <hr className="h-1 bg-gradient-to-r from-accent to-primary border-none my-4" />
-                        <p className="md:w-1/2">
+                    <div className="w-[80%]  mx-auto grid gap-5 justify-start items-center place-content-center md:h-screen h-[70vh]">
+                        <span className="font-medium text-sm" data-aos='fade-up' data-aos-delay="100">portfolio</span>
+                        <h1 className="text-4xl font-medium" data-aos='fade-up' data-aos-delay="50">All Projects</h1>
+                        <hr className="h-1 bg-gradient-to-r from-accent to-primary border-none my-4" data-aos='fade-up' data-aos-delay="50"/>
+                        <p className="md:w-1/2" data-aos='fade-up' data-aos-delay="50">
                             A collection of things I've design for brands. all intentional.All are very thoughtful ; if something catches your eye, just reach out, and I'll get you in.
                         </p>
 
-                        <a href="#contact">
+                        <a href="#contact" data-aos='fade-up' data-aos-delay="150">
                             <button className="group ease-in duration-300 flex items-center bg-accent text-White px-4 py-2 lg:py-1 rounded-lg gap-2 hover:bg-transparent hover:text-accent hover:border-2 hover:border-accent shadow-lg dark:hover:text-White dark:hover:border-White dark:transition-none">
                                 <span className="text-md font-medium">Get In Touch</span>
                                 <svg className=" h-11 w-6 stroke-white group-hover:stroke-accent dark:group-hover:stroke-White" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg" strokeWidth={2}>
@@ -47,7 +53,7 @@ export function PortfolioPage(){
                     </div>
                 </section>
             </main>
-            <div className='w-[90%] mx-auto flex gap-4 p-4 pt-16 mb-10 dark:text-White'>
+            <div className='w-[90%] mx-auto flex gap-4 p-4 pt-16 mb-10 dark:text-White' data-aos='fade-up' data-aos-delay="50">
                 <button className={`${current === 'all'?'underline underline-offset-[.5rem]':''} hover:underline hover:underline-offset-[.5rem]  w-fit ease-in duration-30  underline-offset-[.5rem] decoration-2`} onClick={()=>{
                     setCurrent('all')}}>All</button>
                 <button className={`${current === 'flyers'?'underline underline-offset-[.5rem]':''} hover:underline hover:underline-offset-[.5rem]  w-fit ease-in duration-30  underline-offset-[.5rem] decoration-2`} onClick={()=>{
@@ -55,7 +61,7 @@ export function PortfolioPage(){
                 <button className={`${current === 'logo'?'underline underline-offset-[.5rem]':''} hover:underline hover:underline-offset-[.5rem]  w-fit ease-in duration-30  underline-offset-[.5rem] decoration-2`} onClick={()=>{
                     setCurrent('logo')}}>Logos</button>
             </div>
-            <div className='w-[90%] mx-auto grid gap-5 lg:grid-cols-3 md:grid-cols-2'>
+            <div className='w-[90%] mx-auto grid gap-5 lg:grid-cols-3 md:grid-cols-2' data-aos='fade-up' data-aos-delay="50">
                 <div className={`${current === 'all' || current === 'flyers'?'':'hidden'} relative overflow-hidden rounded-xl`} id='flyer'>
                     <img src={graphics1} alt="first-graphic" className='ease-in duration-300 rounded-xl brightness-50 hover:scale-125' onClick={showImage}/>
                     <span className='absolute bottom-4 right-2 text-white text-2xl'>Flyer</span>
