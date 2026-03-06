@@ -1,4 +1,5 @@
 import { NavBar } from "./NavBar"
+import { Loader } from "./Loader"
 import { Hero } from "./Hero"
 import { About } from "./About"
 import { Services } from "./Services"
@@ -9,6 +10,7 @@ import { Footer } from "./Footer"
 export function Home(){
     return(
         <>
+            <Loader/>
             <NavBar/>
             <Hero/>
             <About/>
