@@ -43,10 +43,10 @@ export function Contact(){
     return(
         <form action="none" ref={form} className="w-[90%] md:w-[80%] lg:w-[60%] mx-auto mt-[7rem] grid gap-10 scroll-mt-[8rem]" id="contact" onSubmit={sendEmail}>
             <div className="grid gap-5 lg:w-1/2 lg:mx-auto">
-                <h1 className="text-3xl font-bold md:text-center md:text-4xl">Got a project? <br />
+                <h1 className="text-3xl font-bold md:text-center md:text-4xl dark:text-White">Got a project? <br />
                     Let's Talk
                 </h1> 
-                <p className="text-md font-medium md:text-center md:w-2/3 md:mx-auto lg:w-full">
+                <p className="text-md font-medium md:text-center md:w-2/3 md:mx-auto lg:w-full dark:text-White">
                     Launching a business or working on an ongoing project? I'm here to help! Reach out, and let's discuss how to bring your brand to life!
                 </p>
             </div>
@@ -59,7 +59,7 @@ export function Contact(){
            <button
                 type="submit"
                 disabled={loading}
-                className="w-fit bg-accent text-white p-3  rounded-lg hover:bg-transparent hover:border-2 hover:text-accent hover:border-accent transition flex items-center justify-self-center gap-2 disabled:opacity-60"
+                className="w-fit bg-accent text-white p-3  rounded-lg hover:bg-transparent hover:border-2 hover:text-accent hover:border-accent transition flex items-center justify-self-center gap-2 disabled:opacity-60 dark:transition-none dark:hover:text-White dark:hover:border-White"
             >
 
                 {loading ? (

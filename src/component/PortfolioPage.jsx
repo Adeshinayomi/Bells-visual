@@ -25,9 +25,9 @@ export function PortfolioPage(){
     }
     return(
         <>
-            <main className="pt-16 bg-hero">
+            <main className="pt-16 bg-hero dark:bg-hero-dark dark:text-White">
                 <NavBar/>
-                <section className='bg-hero'>
+                <section>
                     <div className=" w-[80%]  mx-auto grid gap-5 justify-start items-center place-content-center md:h-screen h-[70vh]">
                         <span className="font-medium text-sm">portfolio</span>
                         <h1 className="text-4xl font-medium">All Projects</h1>
@@ -35,16 +35,19 @@ export function PortfolioPage(){
                         <p className="md:w-1/2">
                             A collection of things I've design for brands. all intentional.All are very thoughtful ; if something catches your eye, just reach out, and I'll get you in.
                         </p>
-                        <button className="w-fit group ease-in duration-300 flex items-center bg-accent text-White px-4 py-2 lg:py-1 rounded-lg gap-2 hover:bg-transparent hover:text-accent hover:border-2 hover:border-accent shadow-lg">
-                            <span className="text-md font-medium">Get In Touch</span>
-                            <svg className=" h-11 w-6 stroke-white group-hover:stroke-accent" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg" strokeWidth={2}>
-                            <path d="M5 12H19M19 12L13 6M19 12L13 18" />
-                            </svg>
-                        </button>
+
+                        <a href="#contact">
+                            <button className="group ease-in duration-300 flex items-center bg-accent text-White px-4 py-2 lg:py-1 rounded-lg gap-2 hover:bg-transparent hover:text-accent hover:border-2 hover:border-accent shadow-lg dark:hover:text-White dark:hover:border-White dark:transition-none">
+                                <span className="text-md font-medium">Get In Touch</span>
+                                <svg className=" h-11 w-6 stroke-white group-hover:stroke-accent dark:group-hover:stroke-White" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg" strokeWidth={2}>
+                                <path d="M5 12H19M19 12L13 6M19 12L13 18" />
+                                </svg>
+                            </button>
+                        </a>
                     </div>
                 </section>
             </main>
-            <div className='w-[90%] mx-auto flex gap-4 p-4 pt-16 mb-10'>
+            <div className='w-[90%] mx-auto flex gap-4 p-4 pt-16 mb-10 dark:text-White'>
                 <button className={`${current === 'all'?'underline underline-offset-[.5rem]':''} hover:underline hover:underline-offset-[.5rem]  w-fit ease-in duration-30  underline-offset-[.5rem] decoration-2`} onClick={()=>{
                     setCurrent('all')}}>All</button>
                 <button className={`${current === 'flyers'?'underline underline-offset-[.5rem]':''} hover:underline hover:underline-offset-[.5rem]  w-fit ease-in duration-30  underline-offset-[.5rem] decoration-2`} onClick={()=>{

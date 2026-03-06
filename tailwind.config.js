@@ -29,6 +29,7 @@ export default {
       },
       backgroundImage:{
         'hero':'linear-gradient(135deg, #F9FAFB 0%, #EEF2FF 100%)',
+        'hero-dark':'linear-gradient(135deg, #000000 0%, #000000 100%)',
         'soft-ui':
           'radial-gradient(circle at top left, rgba(99,102,241,0.08), transparent 40%), radial-gradient(circle at bottom right, rgba(59,130,246,0.08), transparent 40%)',
         'port':

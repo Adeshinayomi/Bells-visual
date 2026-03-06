@@ -18,10 +18,10 @@ import close from '../assets/image/Icons/close-icon.svg'
         })
     }
     return(
-        <section className="bg-hero grid gap-8 justidy-center mt-[10rem] scroll-mt-[8rem]" id='works'>
+        <section className="bg-hero dark:bg-hero-dark grid gap-8 justidy-center mt-[10rem] scroll-mt-[8rem]" id='works'>
             <div className="grid gap-5 justify-center">
-                <h1 className="text-3xl font-bold text-center">Featured Works</h1>
-                <p className="text-sm w-5/6 mx-auto text-center font-medium">
+                <h1 className="text-3xl font-bold text-center dark:text-White">Featured Works</h1>
+                <p className="text-sm w-5/6 mx-auto text-center font-medium dark:text-White">
                     Take a look at some of my finest works for brands that i have worked with and help grow their business visually
                 </p>
             </div>

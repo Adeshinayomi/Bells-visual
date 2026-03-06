@@ -73,7 +73,7 @@ export function Testimonial() {
 
       <div className="grid gap-5 items-start place-content-start lg:w-5/6">
         <svg
-          className="h-16 w-16 fill-accent"
+          className="h-16 w-16 fill-accent dark:fill-White"
           fill="none"
           version="1.1"
           ref={btnDiv}
@@ -98,12 +98,12 @@ export function Testimonial() {
           </g>
         </svg>
 
-        <p className="text-lg md:w-5/6" ref={textDiv}>
+        <p className="text-lg md:w-5/6 dark:text-White" ref={textDiv}>
           {testimonies[count].text}
         </p>
         <div className="grid gap-2" ref={nameDiv}>
-          <h1 className="text-2xl font-bold ">{testimonies[count].name}</h1>
-          <h4 className="text-lg font-medium">{testimonies[count].role}</h4>
+          <h1 className="text-2xl font-bold dark:text-White">{testimonies[count].name}</h1>
+          <h4 className="text-lg font-medium dark:text-White">{testimonies[count].role}</h4>
         </div>
 
         <div className="flex gap-2">
