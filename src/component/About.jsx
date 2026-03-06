@@ -1,7 +1,7 @@
 import { useEffect,useState,useRef } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Owner from "../assets/image/person's-image.jpeg"
+import Owner from "../assets/image/person's-image.webp"
 export function About(){
         AOS.init({  duration: 400,
       easing: 'ease',

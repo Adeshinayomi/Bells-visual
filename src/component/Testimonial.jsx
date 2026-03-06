@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import testimonyImage from "../assets/image/testimony-image.png";
-import testimonyImage2 from "../assets/image/testimony-image-2.png";
+import testimonyImage from "../assets/image/testimony-image.webp";
+import testimonyImage2 from "../assets/image/testimony-image-2.webp";
 export function Testimonial() {
   const [count, setCount] = useState(0);
   const imageDiv = useRef(null);

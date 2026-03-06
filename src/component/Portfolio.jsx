@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import graphics1 from '../assets/image/graphics-3.png'
-import graphics3 from '../assets/image/graphics-5.png'
-import graphics4 from '../assets/image/graphics-2.png'
-import logo1 from '../assets/image/logo-1.png'
+import graphics1 from '../assets/image/graphics-3.webp'
+import graphics3 from '../assets/image/graphics-5.webp'
+import graphics4 from '../assets/image/graphics-2.webp'
+import logo1 from '../assets/image/logo-1.webp'
  
  export function Portfolio(){
         AOS.init({  duration: 400,

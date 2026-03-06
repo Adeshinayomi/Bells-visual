@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import graphics1 from '../assets/image/graphics-3.png'
-import graphics2 from '../assets/image/graphics-4.png'
-import graphics3 from '../assets/image/graphics-1.png'
-import graphics4 from '../assets/image/graphics-2.png'
-import graphic5 from '../assets/image/graphics-5.png'
-import logo1 from '../assets/image/logo-1.png'
-import logo2 from '../assets/image/logo-2.png'
-import logo3 from '../assets/image/logo-3.png'
+import graphics1 from '../assets/image/graphics-3.webp'
+import graphics2 from '../assets/image/graphics-4.webp'
+import graphics3 from '../assets/image/graphics-1.webp'
+import graphics4 from '../assets/image/graphics-2.webp'
+import graphic5 from '../assets/image/graphics-5.webp'
+import logo1 from '../assets/image/logo-1.webp'
+import logo2 from '../assets/image/logo-2.webp'
+import logo3 from '../assets/image/logo-3.webp'
 import { NavBar } from "./NavBar"
 import { Contact } from './Contact'
 import { Footer } from './Footer'

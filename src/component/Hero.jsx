@@ -1,6 +1,6 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Owner from "../assets/image/person's-image.jpeg"
+import Owner from "../assets/image/person's-image.webp"
 import adobeAi from '../assets/image/Icons/adobe-illustrator-icon.png'
 import adobePhoto from '../assets/image/Icons/adobe-photoshop-icon.png'
 import figma from '../assets/image/Icons/figma-icon.png'
