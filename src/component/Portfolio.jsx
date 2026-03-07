@@ -51,7 +51,7 @@ import logo1 from '../assets/image/logo-1.webp'
                 </div>
             </div>
             <button className='ease-in duration-300 group bg-accent px-6 py-2 justify-self-center flex gap-2 text-white items-center rounded-xl mb-10 hover:bg-transparent hover:border-2 hover:border-accent hover:text-accent dark:hover:text-White dark:transition-none dark:hover:border-White '>
-                <span className='text-lg font-medium dar'><Link to="/portfolio">View All</Link></span>
+                <span className='text-lg font-medium dar'><HashLink to="/portfolio#">View All</HashLink></span>
                 <svg className=" h-10 w-6 stroke-white ease-in duration-300 group-hover:stroke-accent dark:group-hover:stroke-White" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg" strokeWidth={2}>
                     <path d="M5 12H19M19 12L13 6M19 12L13 18" />
                 </svg>

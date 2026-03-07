@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import LightLogo from '../assets/image/Logo-variant-light.png'
 import DarkLogo from '../assets/image/Logo-variant-dark.png'
 import ThemeToggle from "./ThemeToggle";
+import { Link } from "react-router-dom";
 export function NavBar(){
     const [isOpen,setIsOpen]=useState(false)
     const [current,setCurrent]=useState('home')
@@ -53,10 +54,10 @@ export function NavBar(){
                 </div>
                 <div className='w-full md:w-[90%] mx-auto flex justify-between items-center '>
                     <div className="dark:hidden">
-                        <a href="/#"><img src={LightLogo} alt="light-logo" width={70} /></a>
+                        <Link to="/#"><img src={LightLogo} alt="light-logo" width={70} /></Link>
                     </div>
                     <div className="hidden dark:grid  items-center">
-                        <a href="/#"><img src={DarkLogo} alt="dark-logo" width={70} /></a>
+                        <Link to="/#"><img src={DarkLogo} alt="dark-logo" width={70} /></Link>
                     </div>
 
                     <ul className={`${isOpen?'':'hidden'} dark:bg-accent fixed top-0 left-0 bg-primary grid items-start py-10 gap-5 md:w-2/3 w-full h-screen md:relative md:h-fit md:flex gap-4 md:justify-center md:bg-transparent dark:md:bg-transparent md:py-0`}>
@@ -94,12 +95,12 @@ export function NavBar(){
                         </svg>
 
 
-                        <a href="#contact">
+                        <HashLink smooth to="#contact">
                             <button className="hidden ease-in duration-300 bg-accent text-White px-4 py-2  rounded-lg gap-2 hover:bg-transparent hover:text-accent hover:border-2 hover:border-accent shadow-lg dark:hover:text-White dark:hover:border-White dark:transition-none md:flex">
                                 <span className="text-md font-medium">Get In Touch</span>
         
                             </button>
-                        </a>
+                        </HashLink>
                     </div>
                 </div>
                 
