@@ -56,26 +56,26 @@ export function NavBar(){
                         <a href="/#"><img src={LightLogo} alt="light-logo" width={70} /></a>
                     </div>
                     <div className="hidden dark:grid  items-center">
-                        <a href="/#"><img src={DarkLogo} alt="dark-logo" width={80} /></a>
+                        <a href="/#"><img src={DarkLogo} alt="dark-logo" width={70} /></a>
                     </div>
 
                     <ul className={`${isOpen?'':'hidden'} dark:bg-accent fixed top-0 left-0 bg-primary grid items-start py-10 gap-5 md:w-2/3 w-full h-screen md:relative md:h-fit md:flex gap-4 md:justify-center md:bg-transparent dark:md:bg-transparent md:py-0`}>
 
                         <div className='grid h-1/2 px-4 mt-10 md:flex md:mt-0 md:gap-4 '>
-                            <li className={`${current === 'home'?'underline':''} md:hover:underline md:underline-offset-[1rem] dark:text-White`} ><HashLink smooth to="/#" onClick={()=>{
-                                closeMenu
+                            <li className={`${current === 'home'?'md:underline':''} md:hover:underline md:underline-offset-[1rem] dark:text-White`} ><HashLink smooth to="/#" onClick={()=>{
+                                closeMenu()
                                 setCurrent('home')
                             } }>Home</HashLink></li>
-                            <li className={`${current === 'about'?'underline':''} md:hover:underline md:underline-offset-[1rem] dark:text-White`}  ><HashLink smooth to="/#about" onClick={()=>{
-                                closeMenu
+                            <li className={`${current === 'about'?'md:underline':''} md:hover:underline md:underline-offset-[1rem] dark:text-White`}  ><HashLink smooth to="/#about" onClick={()=>{
+                                closeMenu()
                                 setCurrent('about')
                             } }>About</HashLink></li>
-                            <li className={`${current === 'services'?'underline':''} md:hover:underline md:underline-offset-[1rem] dark:text-White`} ><HashLink smooth to="/#services" onClick={()=>{
-                                closeMenu
+                            <li className={`${current === 'services'?'md:underline':''} md:hover:underline md:underline-offset-[1rem] dark:text-White`} ><HashLink smooth to="/#services" onClick={()=>{
+                                closeMenu()
                                 setCurrent('services')
                             } }>Services</HashLink></li>
-                            <li className={`${current === 'portfolio'?'underline':''} md:hover:underline md:underline-offset-[1rem] dark:text-White`} ><HashLink smooth to="/portfolio" onClick={()=>{
-                                closeMenu
+                            <li className={`${current === 'portfolio'?'md:underline':''} md:hover:underline md:underline-offset-[1rem] dark:text-White`} ><HashLink smooth to="/portfolio" onClick={()=>{
+                                closeMenu()
                                 setCurrent('portfolio')
                             } }>Portfolio</HashLink></li>
                         </div>    
