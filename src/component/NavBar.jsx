@@ -75,7 +75,7 @@ export function NavBar(){
                                 closeMenu()
                                 setCurrent('services')
                             } }>Services</HashLink></li>
-                            <li className={`${current === 'portfolio'?'md:underline':''} md:hover:underline md:underline-offset-[1rem] dark:text-White`} ><HashLink smooth to="/portfolio" onClick={()=>{
+                            <li className={`${current === 'portfolio'?'md:underline':''} md:hover:underline md:underline-offset-[1rem] dark:text-White`} ><HashLink smooth to="/portfolio#" onClick={()=>{
                                 closeMenu()
                                 setCurrent('portfolio')
                             } }>Portfolio</HashLink></li>

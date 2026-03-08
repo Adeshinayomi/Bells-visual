@@ -10,8 +10,8 @@ export function Testimonial() {
   const [testimonies, setTestimonies] = useState([
     {
       image: testimonyImage2,
-      name: "Sonusi Abiodun",
-      role: "Realtor Queen scapes/ properties",
+      name: "Sonusi Eniola",
+      role: "Realtor Queenscapes",
       text: `
         "Working with Bell's visual was great. The designs were intuitive, visually appealing, and easy for users to navigate.
         Creative but Trustworthy
